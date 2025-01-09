@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Theory Concepts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .concept {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        h2 {
+            color: #007BFF;
+            margin-top: 0;
+        }
+        p {
+            margin: 8px 0;
+        }
+        .wisdom {
+            font-style: italic;
+            color: #bbb;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .page-indicator {
+            color: #fff;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Game Theory Concepts</h1>
+</header>
+
+<div class="container">
+    <div class="concept active" id="concept-1">
+        <h2>1. Prisoner's Dilemma</h2>
+        <p><strong>Theory:</strong> A scenario where two players can either cooperate or betray each other. Mutual cooperation leads to moderate payoffs for both, while betrayal leads to a better payoff for one at the other's expense.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Cooperation can lead to better outcomes for all parties, but fear of betrayal may lead individuals to act in self-interest, risking worse collective results.</p>
+    </div>
+
+    <div class="concept" id="concept-2">
+        <h2>2. Nash Equilibrium</h2>
+        <p><strong>Theory:</strong> A situation where players choose strategies that are optimal, given the strategies of others. No player has anything to gain by changing their strategy unilaterally.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Success often involves understanding the strategies of others and finding a stable approach that balances everyone’s choices.</p>
+    </div>
+
+    <div class="concept" id="concept-3">
+        <h2>3. Chicken Game</h2>
+        <p><strong>Theory:</strong> A game where two players head towards each other, and the one who swerves to avoid collision is perceived as the "chicken." Both players can either be brave (not swerve) or cowardly (swerve).</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Sometimes, playing hardball can force resolution, but it's risky. Communication and understanding limits can prevent mutually destructive outcomes.</p>
+    </div>
+
+    <div class="concept" id="concept-4">
+        <h2>4. Battle of the Sexes</h2>
+        <p><strong>Theory:</strong> A coordination game where two players have different preferences over two activities (for example, one prefers going to a football game while the other prefers the opera).</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Compromise and coordination are essential in partnerships, and understanding each other's preferences can enhance satisfaction for all involved.</p>
+    </div>
+
+    <div class="concept" id="concept-5">
+        <h2>5. Hawk-Dove Game</h2>
+        <p><strong>Theory:</strong> A model that examines the conflict between aggressive (hawk) and passive (dove) strategies. The outcome depends on the relative payoffs of fighting versus sharing resources.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> The best outcome arises from understanding when to assert yourself and when to yield, mirroring strategies in competition and cooperation.</p>
+    </div>
+
+    <div class="concept" id="concept-6">
+        <h2>6. Stag Hunt</h2>
+        <p><strong>Theory:</strong> A coordination game where two players can either hunt a stag (requires cooperation) or hunt a hare (individual and safer). Mutual cooperation leads to the best outcome, but the hare is a safe choice if trust is lacking.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> The value of trust and cooperation is significant. Working together can yield greater rewards, but personal instincts might lead to safer, less rewarding choices.</p>
+    </div>
+
+    <div class="concept" id="concept-7">
+        <h2>7. Repeated Games</h2>
+        <p><strong>Theory:</strong> In repeated interactions, players can use past outcomes to inform future decisions, allowing for cooperation based on history.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Long-term relationships can foster trust and collaboration, and previous experiences can guide strategic choices moving forward.</p>
+    </div>
+
+    <div class="concept" id="concept-8">
+        <h2>8. Zero-Sum Games</h2>
+        <p><strong>Theory:</strong> Situations where one player's gain is another's loss, such as chess or poker.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Recognize that in some scenarios, competition is the primary focus, and winning often requires discerning the opponent's strategies and intentions.</p>
+    </div>
+
+    <div class="concept" id="concept-9">
+        <h2>9. Evolutionary Game Theory</h2>
+        <p><strong>Theory:</strong> Studies the evolution of strategies in populations over time, where strategies that yield higher payoffs become more prevalent.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Adaptability and the ability to learn from the environment are crucial for survival and success.</p>
+    </div>
+
+    <div class="concept" id="concept-10">
+        <h2>10. Public Goods Game</h2>
+        <p><strong>Theory:</strong> Players decide how much to contribute to a public resource. Everyone can benefit from the resource regardless of contribution.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Collective action problems can arise where individual self-interest conflicts with the community's well-being, highlighting the need for cooperation and social responsibility.</p>
+    </div>
+
+    <div class="concept" id="concept-11">
+        <h2>11. Comparative Advantage</h2>
+        <p><strong>Theory:</strong> A principle that suggests players (or countries) should specialize in producing goods or services where they have the lowest opportunity cost, leading to more efficient outcomes through trade.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Specialization and trade can lead to mutual benefits, emphasizing that focusing on individual strengths leads to overall improved efficiency and prosperity.</p>
+    </div>
+
+    <div class="concept" id="concept-12">
+        <h2>12. Social Choice Theory</h2>
+        <p><strong>Theory:</strong> Examines how collective decisions are made based on individual preferences, often addressing issues like voting systems and welfare economics.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> The method of aggregating individual preferences can significantly affect outcomes; thus, the design of decision-making processes is crucial for fairness and representation.</p>
+    </div>
+
+    <div class="concept" id="concept-13">
+        <h2>13. Kuhn-Tucker Conditions (Non-linear Programming)</h2>
+        <p><strong>Theory:</strong> A set of conditions used for solving constrained optimization problems, often relevant in economic modeling and resource allocation.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Optimal resource allocation requires the understanding of constraints and trade-offs, guiding decisions towards efficient outcomes.</p>
+    </div>
+
+    <div class="concept" id="concept-14">
+        <h2>14. Bayesian Game Theory</h2>
+        <p><strong>Theory:</strong> Incorporates incomplete information and strategic decision-making based on beliefs about other players' private information (such as types or payoffs).</p>
+        <p class="wisdom"><strong>Wisdom:</strong> When uncertainty is involved, forming beliefs and adjusting strategies accordingly is essential; anticipation of others’ actions becomes a strategic advantage.</p>
+    </div>
+
+    <div class="concept" id="concept-15">
+        <h2>15. Correlated Equilibrium</h2>
+        <p><strong>Theory:</strong> A solution concept where players coordinate their strategies based on signals received from a common source.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Coordination can lead to better collective outcomes, highlighting the power of communication and alignment in achieving optimal results.</p>
+    </div>
+
+    <div class="concept" id="concept-16">
+        <h2>16. Mechanism Design</h2>
+        <p><strong>Theory:</strong> The study of how to construct a game or mechanism that leads to desired outcomes, focusing on incentive structures and participants' preferences.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Designing systems and incentives carefully can guide participants toward behaviors that produce beneficial results for the collective.</p>
+    </div>
+
+    <div class="concept" id="concept-17">
+        <h2>17. Gambler’s Ruin</h2>
+        <p><strong>Theory:</strong> A scenario that explores the likelihood of a gambler eventually going broke given a series of bets and outcomes, often modeled with Markov chains.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Probability and risk management are vital, reminding us that pursuing gains without considering the potential for loss can lead to ruin.</p>
+    </div>
+
+    <div class="concept" id="concept-18">
+        <h2>18. Safety in Numbers (or "Risk Aversion")</h2>
+        <p><strong>Theory:</strong> This concept considers how individuals may alter their strategies or behaviors based on perceived risks in competition or social situations.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Understanding the dynamics of risk and the safety provided by collective action or solidarity can promote strategic choices that mitigate potential losses.</p>
+    </div>
+
+    <div class="concept" id="concept-19">
+        <h2>19. Forward and Backward Induction</h2>
+        <p><strong>Theory:</strong> Techniques used in extensive games; forward induction considers players’ actions affecting future behavior, while backward induction solves games by starting from the end and determining earlier strategies.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Understanding strategic implications of current actions on future outcomes is crucial in planning and decision-making.</p>
+    </div>
+
+    <div class="concept" id="concept-20">
+        <h2>20. Tit for Tat</h2>
+        <p><strong>Theory:</strong> A strategy in the iterated Prisoner's Dilemma that mimics the opponent's previous action—cooperates if the opponent cooperated, and defects if the opponent defected.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Consistency in responses fosters cooperation, making it a strong strategy in repeated interactions; building trust through reciprocity is a powerful tactic.</p>
+    </div>
+
+    <div class="concept" id="additional-insights">
+        <h2>Additional Insights from Game Theory</h2>
+        <p><strong>Auction Theory:</strong> Different auction types lead to distinct strategies and outcomes. Understanding auction design can enhance both seller revenue and bidder strategy.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Different environments (e.g., English vs. Dutch auctions) will create varying competitive dynamics; knowing the rules of engagement enhances strategic decision-making.</p>
+
+        <p><strong>Risk Dominance:</strong> Players may choose a strategy that is less risky to them, even if it’s not the most beneficial overall.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Individuals often prefer safety over the potential for higher payoffs when uncertain, indicating the psychological factors that influence economic decisions.</p>
+
+        <p><strong>Coalition Formation:</strong> Players can form coalitions to improve their collective outcomes, leading to negotiations and cooperative strategies.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Collaboration can enhance bargaining power and resource outcomes; building alliances is a crucial strategy in competitive situations.</p>
+
+        <p><strong>Network Games:</strong> The structure of connections between players (social or economic networks) can influence outcomes significantly.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Strategic positioning within a network can amplify influence and resource access; relationships and connections matter just as much as individual capabilities.</p>
+
+        <p><strong>Evolution of Cooperation:</strong> Explores how cooperation can emerge in competitive environments, despite the individual incentive to defect.</p>
+        <p class="wisdom"><strong>Wisdom:</strong> Long-term relationships and repeated interactions can cultivate cooperative behavior even in competitive settings, highlighting the importance of social dynamics.</p>
+    </div>
+</div>
+
+<div class="navigation">
+    <button class="button" id="prevBtn">Previous</button>
+    <span class="page-indicator" id="pageIndicator">1/20</span>
+    <button class="button" id="nextBtn">Next</button>
+</div>
+
+<script>
+    let currentConcept = 0;
+    const concepts = document.querySelectorAll('.concept');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const pageIndicator = document.getElementById('pageIndicator');
+    
+    function showConcept(index) {
+        concepts.forEach((concept, i) => {
+            concept.classList.toggle('active', i === index);
+        });
+        pageIndicator.textContent = `${index + 1}/${concepts.length}`; // Update the page indicator
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentConcept = (currentConcept > 0) ? currentConcept - 1 : concepts.length - 1;
+        showConcept(currentConcept);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentConcept = (currentConcept < concepts.length - 1) ? currentConcept + 1 : 0;
+        showConcept(currentConcept);
+    });
+
+    // Initial display
+    showConcept(currentConcept);
+</script>
+
+</body>
+</html>
