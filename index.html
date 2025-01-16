@@ -85,120 +85,207 @@
         <h2>1. Prisoner's Dilemma</h2>
         <p><strong>Theory:</strong> A scenario where two players can either cooperate or betray each other. Mutual cooperation leads to moderate payoffs for both, while betrayal leads to a better payoff for one at the other's expense.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Cooperation can lead to better outcomes for all parties, but fear of betrayal may lead individuals to act in self-interest, risking worse collective results.</p>
+        <pre>
+payoff_tensor_prisoners = np.array([[[3, 3], [0, 5]],
+                                     [[5, 0], [1, 1]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-2">
         <h2>2. Nash Equilibrium</h2>
         <p><strong>Theory:</strong> A situation where players choose strategies that are optimal, given the strategies of others. No player has anything to gain by changing their strategy unilaterally.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Success often involves understanding the strategies of others and finding a stable approach that balances everyone’s choices.</p>
+        <pre>
+payoff_tensor_nash = np.array([[[2, 2], [0, 3]],
+                                [[3, 0], [1, 1]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-3">
         <h2>3. Chicken Game</h2>
         <p><strong>Theory:</strong> A game where two players head towards each other, and the one who swerves to avoid collision is perceived as the "chicken." Both players can either be brave (not swerve) or cowardly (swerve).</p>
         <p class="wisdom"><strong>Wisdom:</strong> Sometimes, playing hardball can force resolution, but it's risky. Communication and understanding limits can prevent mutually destructive outcomes.</p>
+        <pre>
+payoff_tensor_chicken = np.array([[[0, 0], [-1, 1]],
+                                   [[1, -1], [-10, -10]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-4">
         <h2>4. Battle of the Sexes</h2>
         <p><strong>Theory:</strong> A coordination game where two players have different preferences over two activities (for example, one prefers going to a football game while the other prefers the opera).</p>
         <p class="wisdom"><strong>Wisdom:</strong> Compromise and coordination are essential in partnerships, and understanding each other's preferences can enhance satisfaction for all involved.</p>
+        <pre>
+payoff_tensor_battle_of_sexes = np.array([[[2, 1], [0, 0]],
+                                            [[0, 0], [1, 2]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-5">
         <h2>5. Hawk-Dove Game</h2>
         <p><strong>Theory:</strong> A model that examines the conflict between aggressive (hawk) and passive (dove) strategies. The outcome depends on the relative payoffs of fighting versus sharing resources.</p>
         <p class="wisdom"><strong>Wisdom:</strong> The best outcome arises from understanding when to assert yourself and when to yield, mirroring strategies in competition and cooperation.</p>
+        <pre>
+payoff_tensor_hawk_dove = np.array([[[0, 0], [3, 1]],
+                                      [[1, 3], [2, 2]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-6">
         <h2>6. Stag Hunt</h2>
         <p><strong>Theory:</strong> A coordination game where two players can either hunt a stag (requires cooperation) or hunt a hare (individual and safer). Mutual cooperation leads to the best outcome, but the hare is a safe choice if trust is lacking.</p>
         <p class="wisdom"><strong>Wisdom:</strong> The value of trust and cooperation is significant. Working together can yield greater rewards, but personal instincts might lead to safer, less rewarding choices.</p>
+        <pre>
+payoff_tensor_stag_hunt = np.array([[[4, 4], [0, 3]],
+                                      [[3, 0], [2, 2]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-7">
         <h2>7. Repeated Games</h2>
         <p><strong>Theory:</strong> In repeated interactions, players can use past outcomes to inform future decisions, allowing for cooperation based on history.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Long-term relationships can foster trust and collaboration, and previous experiences can guide strategic choices moving forward.</p>
+        <pre>
+payoff_tensor_repeated = np.tile(payoff_tensor_prisoners, (3, 1, 1))  # Repeat 3 times
+</pre>
     </div>
 
     <div class="concept" id="concept-8">
         <h2>8. Zero-Sum Games</h2>
         <p><strong>Theory:</strong> Situations where one player's gain is another's loss, such as chess or poker.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Recognize that in some scenarios, competition is the primary focus, and winning often requires discerning the opponent's strategies and intentions.</p>
+        <pre>
+payoff_tensor_zero_sum = np.array([[[1, -1], [0, 0]],
+                                    [[0, 0], [-1, 1]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-9">
         <h2>9. Evolutionary Game Theory</h2>
         <p><strong>Theory:</strong> Studies the evolution of strategies in populations over time, where strategies that yield higher payoffs become more prevalent.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Adaptability and the ability to learn from the environment are crucial for survival and success.</p>
+        <pre>
+payoff_tensor_evolutionary = payoff_tensor_hawk_dove  # Using Hawk-Dove as an example
+</pre>
     </div>
 
     <div class="concept" id="concept-10">
         <h2>10. Public Goods Game</h2>
         <p><strong>Theory:</strong> Players decide how much to contribute to a public resource. Everyone can benefit from the resource regardless of contribution.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Collective action problems can arise where individual self-interest conflicts with the community's well-being, highlighting the need for cooperation and social responsibility.</p>
+        <pre>
+payoff_tensor_public_goods = np.array([[[1, 1], [3, 0]],
+                                        [[0, 3], [2, 2]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-11">
         <h2>11. Comparative Advantage</h2>
         <p><strong>Theory:</strong> A principle that suggests players (or countries) should specialize in producing goods or services where they have the lowest opportunity cost, leading to more efficient outcomes through trade.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Specialization and trade can lead to mutual benefits, emphasizing that focusing on individual strengths leads to overall improved efficiency and prosperity.</p>
+        <pre>
+# Example for two countries producing two goods
+payoff_tensor_comparative_advantage = np.array([[[10, 5], [0, 15]],  # Outputs for Country A
+                                                 [[15, 0], [5, 10]]]) # Outputs for Country B
+</pre>
     </div>
 
     <div class="concept" id="concept-12">
         <h2>12. Social Choice Theory</h2>
         <p><strong>Theory:</strong> Examines how collective decisions are made based on individual preferences, often addressing issues like voting systems and welfare economics.</p>
         <p class="wisdom"><strong>Wisdom:</strong> The method of aggregating individual preferences can significantly affect outcomes; thus, the design of decision-making processes is crucial for fairness and representation.</p>
+        <pre>
+payoff_tensor_social_choice = np.array([[[3, 2, 1], [0, 1, 2]],
+                                         [[1, 0, 2], [3, 2, 1]]])  # Preferences of two voters
+</pre>
     </div>
 
     <div class="concept" id="concept-13">
         <h2>13. Kuhn-Tucker Conditions (Non-linear Programming)</h2>
         <p><strong>Theory:</strong> A set of conditions used for solving constrained optimization problems, often relevant in economic modeling and resource allocation.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Optimal resource allocation requires the understanding of constraints and trade-offs, guiding decisions towards efficient outcomes.</p>
+        <pre>
+# Example of a constraint optimization problem
+payoff_tensor_kuhn_tucker = np.array([[[1, 2], [3, 4]],  # Utility values for constraints
+                                       [[0, 5], [6, 7]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-14">
         <h2>14. Bayesian Game Theory</h2>
         <p><strong>Theory:</strong> Incorporates incomplete information and strategic decision-making based on beliefs about other players' private information (such as types or payoffs).</p>
         <p class="wisdom"><strong>Wisdom:</strong> When uncertainty is involved, forming beliefs and adjusting strategies accordingly is essential; anticipation of others’ actions becomes a strategic advantage.</p>
+        <pre>
+# Basic representation of types and payoffs
+payoff_tensor_bayesian = np.array([[[3, 2], [1, 0]],  # Type 1
+                                    [[2, 3], [0, 1]]]) # Type 2
+</pre>
     </div>
 
     <div class="concept" id="concept-15">
         <h2>15. Correlated Equilibrium</h2>
         <p><strong>Theory:</strong> A solution concept where players coordinate their strategies based on signals received from a common source.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Coordination can lead to better collective outcomes, highlighting the power of communication and alignment in achieving optimal results.</p>
+        <pre>
+# Payoff matrix when correlated signals are involved
+payoff_tensor_correlated_equilibrium = np.array([[[2, 2], [1, 0]], 
+                                                  [[0, 1], [1, 2]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-16">
         <h2>16. Mechanism Design</h2>
         <p><strong>Theory:</strong> The study of how to construct a game or mechanism that leads to desired outcomes, focusing on incentive structures and participants' preferences.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Designing systems and incentives carefully can guide participants toward behaviors that produce beneficial results for the collective.</p>
+        <pre>
+# Example of different mechanisms leading to various outcomes
+payoff_tensor_mechanism_design = np.array([[[3, 3], [1, 0]], 
+                                            [[0, 1], [2, 2]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-17">
         <h2>17. Gambler’s Ruin</h2>
         <p><strong>Theory:</strong> A scenario that explores the likelihood of a gambler eventually going broke given a series of bets and outcomes, often modeled with Markov chains.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Probability and risk management are vital, reminding us that pursuing gains without considering the potential for loss can lead to ruin.</p>
+        <pre>
+# Example representation of probabilities
+payoff_tensor_gamblers_ruin = np.array([[[0.5, 0.5], [0.4, 0.6]], 
+                                         [[0.6, 0.4], [0.3, 0.7]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-18">
         <h2>18. Safety in Numbers (or "Risk Aversion")</h2>
         <p><strong>Theory:</strong> This concept considers how individuals may alter their strategies or behaviors based on perceived risks in competition or social situations.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Understanding the dynamics of risk and the safety provided by collective action or solidarity can promote strategic choices that mitigate potential losses.</p>
+        <pre>
+# Example reflecting choices based on safety perceptions
+payoff_tensor_safety_in_numbers = np.array([[[1, 0]], 
+                                             [[0, 1]]])  # Payoffs related to risk-taking vs. safety
+</pre>
     </div>
 
     <div class="concept" id="concept-19">
         <h2>19. Forward and Backward Induction</h2>
         <p><strong>Theory:</strong> Techniques used in extensive games; forward induction considers players’ actions affecting future behavior, while backward induction solves games by starting from the end and determining earlier strategies.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Understanding strategic implications of current actions on future outcomes is crucial in planning and decision-making.</p>
+        <pre>
+# Example of representing actions taken backward and forward
+payoff_tensor_forward_backward = np.array([[[1, 2], [0, 0]], 
+                                             [[0, 0], [2, 1]]])
+</pre>
     </div>
 
     <div class="concept" id="concept-20">
         <h2>20. Tit for Tat</h2>
         <p><strong>Theory:</strong> A strategy in the iterated Prisoner's Dilemma that mimics the opponent's previous action—cooperates if the opponent cooperated, and defects if the opponent defected.</p>
         <p class="wisdom"><strong>Wisdom:</strong> Consistency in responses fosters cooperation, making it a strong strategy in repeated interactions; building trust through reciprocity is a powerful tactic.</p>
+        <pre>
+# Payoff matrix representing Tit for Tat strategy
+payoff_tensor_tit_for_tat = np.array([[[3, 3], [0, 5]], 
+                                       [[5, 0], [1, 1]]])  # Similar to Prisoner's Dilemma
+</pre>
     </div>
 
 <div class="concept" id="additional-insights">
